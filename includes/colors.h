@@ -14,7 +14,7 @@
 # define COLORS_H
 
 /*
-**   16 couleurs de base en francais
+**   16 basic colors in french
 */
 
 # define ARGENT					0xC0C0C0
@@ -36,7 +36,7 @@
 # define VIOLET					0x800080
 
 /*
-**   140 couleurs en anglais
+**   140 colors in english
 */
 
 # define ALICEBLUE				0xF0F8FF

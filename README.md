@@ -9,7 +9,7 @@ LIBFT - C Standard Library
 
 Using numerical values with the octal table. (man ascii)
 
-#### Optimize these functions ####
+#### Functions who need to be optimize ####
 
 - ft_itoa
 - ft_realloc

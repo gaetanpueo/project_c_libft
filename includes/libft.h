@@ -20,8 +20,6 @@
 **   corectly : $> export MallocScribble=1
 */
 
-# define MINILIBX
-
 /*
 **   <unistd.h>                             for write() and close()
 **   <stdio.h>                              for perror() and strerror()
@@ -32,7 +30,6 @@
 **   <math.h>                               for all mathematic functions
 **   "colors.h"                             colors in hexa, about 156 colors
 **                                             for graphism
-**   <mlx.h>                                for the minilibx if you use it :)
 */
 
 # include <unistd.h>
@@ -45,16 +42,6 @@
 # include <fcntl.h>
 # include <math.h>
 # include "colors.h"
-
-/*
-**   Vues :
-**   - parallèle (cavalière) : coefficient réducteur de 1
-**   - isometrique : vecteur directeur (1, 1, 1), coefficient réducteur de 0,82
-**   - conique :
-*/
-
-# ifdef MINILIBX
-# endif
 
 /*
 **   defines for color in shell (ex: ft_putstr(), ft_putchar(), ...)
@@ -84,13 +71,6 @@
 */
 
 # define BUFF_SIZE					8
-
-/*
-**   define for graphism
-*/
-
-# ifdef MINILIBX
-# endif
 
 /*
 **   <ctype.h>
@@ -213,14 +193,6 @@ void				ft_swap_char	(char *a, char *b);
 */
 
 int					get_next_line	(int const fd, char **line);
-
-/*
-**   Graphism :
-**   need mlx lib (minilibx)
-*/
-
-# ifdef MINILIBX
-# endif
 
 /*
 **   bonus
