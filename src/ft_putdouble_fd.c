@@ -12,15 +12,18 @@
 
 #include <libft.h>
 
-void	ft_putdouble_fd(double d, int fd)
+int		ft_putdouble_fd(double d, int fd)
 {
 	int		i;
+	int		j;
 
+	j = 0;
 	i = 0;
-	ft_putnbr_fd((int)d, fd);
-	ft_putchar_fd('.', fd);
+	i += ft_putnbr_fd((int)d, fd);
+	i += ft_putchar_fd('.', fd);
 	d-= (int)d;
-	while (i++ < 6)
+	while (j++ < 6)
 		d *= 10;
-	ft_putnbr_fd(d, fd);
+	i += ft_putnbr_fd(d, fd);
+	return (i);
 }

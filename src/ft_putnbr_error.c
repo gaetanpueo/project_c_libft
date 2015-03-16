@@ -12,7 +12,7 @@
 
 #include <libft.h>
 
-void	ft_putnbr_error(int n)
+int		ft_putnbr_error(int n)
 {
-	ft_putnbr_fd(n, 2);
+	return (ft_putnbr_fd(n, 2));
 }

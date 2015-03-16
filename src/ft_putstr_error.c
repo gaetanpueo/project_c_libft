@@ -12,7 +12,7 @@
 
 #include <libft.h>
 
-void	ft_putstr_error(char const *s)
+int		ft_putstr_error(char const *s)
 {
-	ft_putstr_fd(s, 2);
+	return (ft_putstr_fd(s, 2));
 }

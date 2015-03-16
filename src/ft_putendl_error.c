@@ -12,7 +12,7 @@
 
 #include <libft.h>
 
-void	ft_putendl_error(char const *s)
+int		ft_putendl_error(char const *s)
 {
-	ft_putendl_fd(s, 2);
+	return (ft_putendl_fd(s, 2));
 }
