@@ -97,7 +97,8 @@ int					ft_isascii		(int c);
 **   <stdio.h>
 **   Additional functions :
 **   ft_putendl() ft_putnbr() ft_putchar_fd() ft_putstr_fd() ft_putendl_fd()
-**   ft_putnbr_fd() ft_putchar_error() ft_putstr_error()
+**   ft_putnbr_fd() ft_putchar_error() ft_putstr_error() ft_putdouble()
+**   ft_putdouble_fd()
 */
 
 void				ft_putchar		(char c);
@@ -112,6 +113,8 @@ void				ft_putendl_fd	(char const *s, int fd);
 void				ft_putnbr		(int n);
 void				ft_putnbr_error	(int n);
 void				ft_putnbr_fd	(int n, int fd);
+void				ft_putdouble	(double d);
+void				ft_putdouble_fd	(double d, int fd);
 
 /*
 **   <stdlib.h>

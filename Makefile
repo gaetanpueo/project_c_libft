@@ -51,6 +51,8 @@ SRCS	=	ft_abs.c \
 			ft_putchar.c \
 			ft_putchar_error.c \
 			ft_putchar_fd.c \
+			ft_putdouble.c \
+			ft_putdouble_fd.c \
 			ft_putendl.c \
 			ft_putendl_fd.c \
 			ft_putnbr.c \
