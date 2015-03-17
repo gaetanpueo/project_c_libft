@@ -75,12 +75,11 @@
 /*
 **   <ctype.h>
 **   Additional functions :
-**   ft_isascii()
+**   ft_isascii() ft_iscntrl() ft_ishexa()
 */
 
 int					ft_isalnum			(int c);
 int					ft_isalpha			(int c);
-int					ft_iscntrl			(int c);
 int					ft_isdigit			(int c);
 int					ft_isgraph			(int c);
 int					ft_islower			(int c);
@@ -92,6 +91,8 @@ int					ft_isxdigit			(int c);
 int					ft_tolower			(int c);
 int					ft_toupper			(int c);
 int					ft_isascii			(int c);
+int					ft_iscntrl			(int c);
+int					ft_ishexa			(const char *val);
 
 /*
 **   <stdio.h>
@@ -110,7 +111,7 @@ int					ft_putnbr			(long n);
 int					ft_putnbr_fd		(long n, int fd);
 int					ft_putdouble		(double d);
 int					ft_putdouble_fd		(double d, int fd);
-int					ft_putnbr_base		(unsigned long nb, char *base, int i);
+int					ft_putnbr_base		(unsigned long nb, char *base);
 
 /*
 **   <stdlib.h>
@@ -118,14 +119,16 @@ int					ft_putnbr_base		(unsigned long nb, char *base, int i);
 **   ft_sgn()
 */
 
+int					ft_abs				(int x);
+int					ft_sgn				(int x);
+int					ft_atoi				(const char *num);
+unsigned int		ft_atoui			(const char *num);
+long				ft_atol				(const char *num);
+unsigned long		ft_atoul			(const char *num);
 char				*ft_itoa			(int n);
 char				*ft_ltoa			(long n);
 char				*ft_realloc			(char *old, int size);
 char				*ft_realloc_o		(char *ptr, size_t old, size_t size);
-int					ft_abs				(int x);
-int					ft_sgn				(int x);
-int					ft_atoi				(const char *str);
-long				ft_atol				(const char *str);
 void				*ft_memalloc		(size_t size);
 void				ft_memdel			(void **ap);
 void				ft_memdel_2d		(char **str);
@@ -170,7 +173,6 @@ void				ft_bzero			(void *s, size_t n);
 **   other
 */
 
-size_t				ft_count_digits		(int n);
 char				**ft_strsplit		(char const *s, char c);
 char				*ft_strrev			(char *s);
 char				*ft_strnew			(size_t size);
@@ -186,6 +188,8 @@ char				*ft_strrep			(char *str, char const *sub,
 int					ft_strequ			(char const *s1, char const *s2);
 int					ft_strnequ			(char const *s1, char const *s2,
 											size_t n);
+int					ft_hexval			(char c);
+size_t				ft_count_digits		(int n);
 size_t				ft_strpos			(const char *s1, const char *s2);
 void				ft_strdel			(char **as);
 void				ft_strclr			(char *s);

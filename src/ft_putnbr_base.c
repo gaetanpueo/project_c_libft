@@ -12,15 +12,22 @@
 
 #include <libft.h>
 
-int			ft_putnbr_base(unsigned long nb, char *base, int i)
+/*
+**   Changer le nom de la fonction car il retourne aussi la valeur ascii
+**   d'un char.
+*/
+
+int			ft_putnbr_base(unsigned long nb, char *base)
 {
 	int		len;
+	int		i;
 
+	i = 0;
 	len = ft_strlen(base);
 	if (nb >= (unsigned long)len)
 	{
-		i += ft_putnbr_base(nb / len, base, 0);
-		i += ft_putnbr_base(nb % len, base, 0);
+		i += ft_putnbr_base(nb / len, base);
+		i += ft_putnbr_base(nb % len, base);
 	}
 	else
 		i += ft_putchar(base[nb]);

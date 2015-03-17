@@ -14,5 +14,5 @@
 
 int		ft_isalpha(int c)
 {
-	return ((ft_isupper(c) || ft_islower(c)) ? 1 : 0);
+	return (ft_isupper(c) || ft_islower(c));
 }

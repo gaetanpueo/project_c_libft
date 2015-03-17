@@ -12,6 +12,12 @@
 
 #include <libft.h>
 
+/*
+**
+**   faire : ft_uitoa(), ft_ltoa(), ft_ultoa()
+**
+*/
+
 char				*ft_itoa(int n)
 {
 	size_t			len;

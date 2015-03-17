@@ -14,5 +14,5 @@
 
 int		ft_islower(int c)
 {
-	return ((c >= 0141 && c <= 0172) ? 1 : 0);
+	return (c >= 0141 && c <= 0172);
 }

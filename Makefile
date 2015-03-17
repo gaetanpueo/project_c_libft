@@ -21,12 +21,14 @@ SRCS	=	ft_abs.c \
 			ft_atol.c \
 			ft_bzero.c \
 			ft_count_digits.c \
+			ft_hexval.c \
 			ft_isalnum.c \
 			ft_isalpha.c \
 			ft_isascii.c \
 			ft_iscntrl.c \
 			ft_isdigit.c \
 			ft_isgraph.c \
+			ft_ishexa.c \
 			ft_islower.c \
 			ft_isprint.c \
 			ft_ispunct.c \

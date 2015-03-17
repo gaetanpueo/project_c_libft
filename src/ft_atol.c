@@ -12,26 +12,49 @@
 
 #include <libft.h>
 
-long		ft_atol(const char *str)
+long				ft_atol(const char *num)
 {
-	long	number;
-	char	scalar;
+	long			value;
+	int				neg;
 
-	number = 0;
-	scalar = 1;
-	while (*str && ft_isspace((unsigned char)*str))
-		str++;
-	if (*str && (*str == '-' || *str == '+'))
+	value = 0;
+	neg = 0;
+	if (ft_ishexa(num))
 	{
-		if (*str == '-')
-			scalar = -1;
-		str++;
+		num += 2;
+		while (*num && ft_isxdigit(*num))
+			value = value * 16 + ft_hexval(*num++);
 	}
-	while (*str && ft_isdigit((unsigned char)*str))
+	else
 	{
-		number *= 10;
-		number += *str - '0';
-		str++;
+		if (num[0] == '-')
+		{
+			neg = 1;
+			num++;
+		}
+		while (*num && ft_isdigit(*num))
+			value = value * 10 + *num++  - '0';
 	}
-	return (scalar * number);
+	if (neg)
+		value = -value;
+	return (value);
+}
+
+unsigned long		ft_atoul(const char *num)
+{
+	unsigned long	value;
+
+	value = 0;
+	if (ft_ishexa(num))
+	{
+		num += 2;
+		while (*num && ft_isxdigit(*num))
+			value = value * 16 + ft_hexval(*num++);
+	}
+	else
+	{
+		while (*num && ft_isdigit(*num))
+			value = value * 10 + *num++  - '0';
+	}
+	return (value);
 }

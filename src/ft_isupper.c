@@ -14,5 +14,5 @@
 
 int		ft_isupper(int c)
 {
-	return ((c >= 0101 && c <= 0132) ? 1 : 0);
+	return (c >= 0101 && c <= 0132);
 }

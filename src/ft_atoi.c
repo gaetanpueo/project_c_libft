@@ -12,26 +12,12 @@
 
 #include <libft.h>
 
-int			ft_atoi(const char *str)
+int				ft_atoi(const char *num)
 {
-	int		number;
-	char	scalar;
+	return (ft_atol(num));
+}
 
-	number = 0;
-	scalar = 1;
-	while (*str && ft_isspace((unsigned char)*str))
-		str++;
-	if (*str && (*str == '-' || *str == '+'))
-	{
-		if (*str == '-')
-			scalar = -1;
-		str++;
-	}
-	while (*str && ft_isdigit((unsigned char)*str))
-	{
-		number *= 10;
-		number += *str - '0';
-		str++;
-	}
-	return (scalar * number);
+unsigned int	ft_atoui(const char *num)
+{
+	return (ft_atoul(num));
 }
