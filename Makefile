@@ -10,10 +10,10 @@
 #                                                                              #
 #******************************************************************************#
 
-BDIR	=	
+BDIR	=	bin/
 SDIR	=	src/
 ODIR	=	obj/
-HDIR	=	includes/
+HDIR	=	inc/
 
 NAME	=	libft.a
 SRCS	=	ft_abs.c \
