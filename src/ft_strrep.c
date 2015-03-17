@@ -12,7 +12,7 @@
 
 #include <libft.h>
 
-char	*ft_strrep(char *str, char const *sub, char const *rep, int recursive)
+char		*ft_strrep(char *str, char const *sub, char const *rep, int recurs)
 {
 	char	*result;
 	char	*pos1;
@@ -32,7 +32,7 @@ char	*ft_strrep(char *str, char const *sub, char const *rep, int recursive)
 		ft_strncat(result, pos, f);
 		ft_strncat(result, rep, ft_strlen(rep));
 		pos = (pos1 + ft_strlen(sub));
-		if (recursive == REPLACE_ONCE)
+		if (recurs == REPLACE_ONCE)
 			break ;
 	}
 	if (pos != (str + ft_strlen(str)))

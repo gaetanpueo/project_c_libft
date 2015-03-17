@@ -12,10 +12,6 @@
 
 #include <libft.h>
 
-/*
-**   tab[j] = "\0" pour passer la compilation en dehors de 42 avec les flgs
-*/
-
 static int	ft_tabsize(char *s, char c)
 {
 	int		size;

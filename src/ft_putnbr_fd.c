@@ -12,7 +12,7 @@
 
 #include <libft.h>
 
-int		ft_putnbr_fd(int n, int fd)
+int		ft_putnbr_fd(long n, int fd)
 {
-	return (ft_putstr_fd(ft_itoa(n), fd));
+	return (ft_putstr_fd(ft_ltoa(n), fd));
 }

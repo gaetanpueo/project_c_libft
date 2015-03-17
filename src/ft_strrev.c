@@ -12,7 +12,7 @@
 
 #include <libft.h>
 
-char	*ft_strrev(char *s)
+char		*ft_strrev(char *s)
 {
 	int		i;
 	char	*str;

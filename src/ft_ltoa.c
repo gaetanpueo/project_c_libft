@@ -1,23 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_digits.c                                  :+:      :+:    :+:   */
+/*   ft_ltoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gpueo--g <gpueo--g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/11 16:56:42 by gpueo--g          #+#    #+#             */
-/*   Updated: 2014/11/11 16:56:43 by gpueo--g         ###   ########.fr       */
+/*   Created: 2014/11/06 12:29:28 by gpueo--g          #+#    #+#             */
+/*   Updated: 2014/11/13 15:49:41 by gpueo--g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-size_t		ft_count_digits(int n)
+char				*ft_ltoa(long n)
 {
-	size_t	i;
+	size_t			len;
+	char			*str;
+	unsigned long	u_nbr;
 
-	i = 1;
-	while (n /= 10)
-		i++;
-	return (i);
+	len = ft_count_digits(n);
+	u_nbr = n;
+	if (n < 0)
+	{
+		u_nbr = -n;
+		len++;
+	}
+	if (!(str = ft_strnew(len)))
+		return (NULL);
+	str[--len] = u_nbr % 10 + '0';
+	while (u_nbr /= 10)
+		str[--len] = u_nbr % 10 + '0';
+	if (n < 0)
+		str[0] = '-';
+	return (str);
 }

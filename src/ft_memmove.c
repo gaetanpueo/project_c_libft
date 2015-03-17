@@ -12,9 +12,9 @@
 
 #include <libft.h>
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void		*ft_memmove(void *dst, const void *src, size_t len)
 {
-	void *dst_;
+	void	*dst_;
 
 	dst_ = ft_memalloc(len);
 	dst_ = ft_memcpy(dst_, src, len);

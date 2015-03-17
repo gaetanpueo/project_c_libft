@@ -12,11 +12,7 @@
 
 #include <libft.h>
 
-/*
-**   lst1 = NULL pour passer la compilation en dehors de 42 avec les flags
-*/
-
-t_list *ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
+t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
 	t_list *lst1;
 	t_list *lst_;

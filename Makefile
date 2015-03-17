@@ -10,10 +10,10 @@
 #                                                                              #
 #******************************************************************************#
 
-BDIR	=	bin/
+BDIR	=	
 SDIR	=	src/
 ODIR	=	obj/
-HDIR	=	inc/
+HDIR	=	includes/
 
 NAME	=	libft.a
 SRCS	=	ft_abs.c \
@@ -40,6 +40,7 @@ SRCS	=	ft_abs.c \
 			ft_lstiter.c \
 			ft_lstmap.c \
 			ft_lstnew.c \
+			ft_ltoa.c \
 			ft_memalloc.c \
 			ft_memccpy.c \
 			ft_memchr.c \
@@ -56,6 +57,7 @@ SRCS	=	ft_abs.c \
 			ft_putendl.c \
 			ft_putendl_fd.c \
 			ft_putnbr.c \
+			ft_putnbr_base.c \
 			ft_putnbr_fd.c \
 			ft_putstr.c \
 			ft_putstr_fd.c \

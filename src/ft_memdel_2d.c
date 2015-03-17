@@ -12,7 +12,7 @@
 
 #include <libft.h>
 
-void	ft_memdel_2d(char **str)
+void				ft_memdel_2d(char **str)
 {
 	unsigned int	i;
 

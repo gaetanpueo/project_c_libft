@@ -97,7 +97,7 @@ int					ft_isascii			(int c);
 **   <stdio.h>
 **   Additional functions :
 **   ft_putendl() ft_putnbr() ft_putchar_fd() ft_putstr_fd() ft_putendl_fd()
-**   ft_putnbr_fd() ft_putdouble() ft_putdouble_fd()
+**   ft_putnbr_fd() ft_putdouble() ft_putdouble_fd() ft_putnbr_base()
 */
 
 int					ft_putchar			(char c);
@@ -106,10 +106,11 @@ int					ft_putstr			(char const *s);
 int					ft_putstr_fd		(char const *s, int fd);
 int					ft_putendl			(char const *s);
 int					ft_putendl_fd		(char const *s, int fd);
-int					ft_putnbr			(int n);
-int					ft_putnbr_fd		(int n, int fd);
+int					ft_putnbr			(long n);
+int					ft_putnbr_fd		(long n, int fd);
 int					ft_putdouble		(double d);
 int					ft_putdouble_fd		(double d, int fd);
+int					ft_putnbr_base		(unsigned long nb, char *base, int i);
 
 /*
 **   <stdlib.h>
@@ -118,6 +119,7 @@ int					ft_putdouble_fd		(double d, int fd);
 */
 
 char				*ft_itoa			(int n);
+char				*ft_ltoa			(long n);
 char				*ft_realloc			(char *old, int size);
 char				*ft_realloc_o		(char *ptr, size_t old, size_t size);
 int					ft_abs				(int x);
@@ -180,7 +182,7 @@ char				*ft_strsub			(char const *s, unsigned int start,
 char				*ft_strjoin			(char const *s1, char const *s2);
 char				*ft_strtrim			(char const *s);
 char				*ft_strrep			(char *str, char const *sub,
-											char const *rep, int recursive);
+											char const *rep, int recurs);
 int					ft_strequ			(char const *s1, char const *s2);
 int					ft_strnequ			(char const *s1, char const *s2,
 											size_t n);
