@@ -18,6 +18,7 @@ HDIR	=	inc/
 NAME	=	libft.a
 SRCS	=	ft_abs.c \
 			ft_atoi.c \
+			ft_atol.c \
 			ft_bzero.c \
 			ft_count_digits.c \
 			ft_isalnum.c \
@@ -49,7 +50,6 @@ SRCS	=	ft_abs.c \
 			ft_memmove.c \
 			ft_memset.c \
 			ft_putchar.c \
-			ft_putchar_error.c \
 			ft_putchar_fd.c \
 			ft_putdouble.c \
 			ft_putdouble_fd.c \
@@ -57,11 +57,7 @@ SRCS	=	ft_abs.c \
 			ft_putendl_fd.c \
 			ft_putnbr.c \
 			ft_putnbr_fd.c \
-			ft_putpointer.c \
-			ft_putpointer_error.c \
-			ft_putpointer_fd.c \
 			ft_putstr.c \
-			ft_putstr_error.c \
 			ft_putstr_fd.c \
 			ft_realloc.c \
 			ft_realloc_o.c \
