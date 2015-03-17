@@ -21,7 +21,7 @@ int		ft_putdouble_fd(double d, int fd)
 	i = 0;
 	i += ft_putnbr_fd((int)d, fd);
 	i += ft_putchar_fd('.', fd);
-	d-= (int)d;
+	d -= (int)d;
 	while (j++ < 6)
 		d *= 10;
 	i += ft_putnbr_fd(d, fd);

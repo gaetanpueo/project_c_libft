@@ -97,29 +97,19 @@ int					ft_isascii			(int c);
 **   <stdio.h>
 **   Additional functions :
 **   ft_putendl() ft_putnbr() ft_putchar_fd() ft_putstr_fd() ft_putendl_fd()
-**   ft_putnbr_fd() ft_putchar_error() ft_putstr_error() ft_putdouble()
-**   ft_putdouble_fd()
+**   ft_putnbr_fd() ft_putdouble() ft_putdouble_fd()
 */
 
 int					ft_putchar			(char c);
-int					ft_putchar_error	(char c);
 int					ft_putchar_fd		(char c, int fd);
 int					ft_putstr			(char const *s);
-int					ft_putstr_error		(char const *s);
 int					ft_putstr_fd		(char const *s, int fd);
 int					ft_putendl			(char const *s);
-int					ft_putendl_error	(char const *s);
 int					ft_putendl_fd		(char const *s, int fd);
 int					ft_putnbr			(int n);
-int					ft_putnbr_error		(int n);
 int					ft_putnbr_fd		(int n, int fd);
 int					ft_putdouble		(double d);
-int					ft_putdouble_error	(double d);
 int					ft_putdouble_fd		(double d, int fd);
-int					ft_putpointer		(/* arguments */);
-int					ft_putpointer_error	(/* arguments */);
-int					ft_putpointer_fd	(/* arguments de ft_putpointer() */,
-											int fd);
 
 /*
 **   <stdlib.h>
@@ -133,6 +123,7 @@ char				*ft_realloc_o		(char *ptr, size_t old, size_t size);
 int					ft_abs				(int x);
 int					ft_sgn				(int x);
 int					ft_atoi				(const char *str);
+long				ft_atol				(const char *str);
 void				*ft_memalloc		(size_t size);
 void				ft_memdel			(void **ap);
 void				ft_memdel_2d		(char **str);
