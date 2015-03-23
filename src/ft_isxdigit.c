@@ -14,7 +14,6 @@
 
 int		ft_isxdigit(int c)
 {
-	return ((ft_isdigit(c)) ||
-			(c >= 0141 && c <= 0146) ||
-			(c >= 0101 && c <= 0106));
+	return ((ft_isdigit(c)) || (c >= 0141 && c <= 0146) ||
+	(c >= 0101 && c <= 0106));
 }

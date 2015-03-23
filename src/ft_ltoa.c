@@ -34,3 +34,19 @@ char				*ft_ltoa(long n)
 		str[0] = '-';
 	return (str);
 }
+
+char				*ft_ultoa(unsigned long n)
+{
+	size_t			len;
+	char			*str;
+	unsigned long	u_nbr;
+
+	len = ft_count_digits(n);
+	u_nbr = n;
+	if (!(str = ft_strnew(len)))
+		return (NULL);
+	str[--len] = u_nbr % 10 + '0';
+	while (u_nbr /= 10)
+		str[--len] = u_nbr % 10 + '0';
+	return (str);
+}
