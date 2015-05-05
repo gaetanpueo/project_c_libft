@@ -14,5 +14,5 @@ Using numerical values with the octal table. (man ascii)
 * The binary file after compilation is libft.a
 * To compile with this library you need to do this :
 ```shell
-gcc [source_files] libft.a
+gcc [your_source_files] libft.a
 ```
