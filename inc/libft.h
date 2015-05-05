@@ -58,6 +58,9 @@
 # define C_CYAN							"\033[36m"
 # define C_GRAY							"\033[37m"
 
+# define B_CYAN							"\033[2;34;46m"
+# define B_YELLOW						"\033[2;34;43m"
+
 /*
 **   defines for ft_strrep()
 */
