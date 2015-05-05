@@ -12,3 +12,7 @@ Using numerical values with the octal table. (man ascii)
 ### Use the library ###
 
 * The binary file after compilation is libft.a
+* To compile with this library you need to do this :
+```shell
+gcc [source files] libft.a
+```
