@@ -111,6 +111,7 @@ all: scmsg $(NAME)
 
 scmsg:
 	@echo "--------------------------- Start compilation libft ----------------------------\n"
+
 scemsg:
 	@echo "\033[34;1m>> \033[0mCompilation files ..."
 
@@ -147,6 +148,7 @@ cleanobj:
 	@echo "\033[34;1m>> \033[0mRemoving objects directory ...\033[73G\c"
 	@rm -rf $(ODIR)
 	@echo "\033[37;1m[\033[34mDone !\033[37m]\033[0m"
+
 clean: cleanobj
 	@echo "\n--------------------------------------------------------------------------------"
 
@@ -158,4 +160,7 @@ fclean: cleanobj
 	@rm -rf $(BDIR)
 	@echo "\033[37;1m[\033[34mDone !\033[37m]\033[0m"
 	@echo "\n--------------------------------------------------------------------------------"
+
 re: fclean all
+
+.PHONY: all clean fclean re
