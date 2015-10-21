@@ -1,6 +1,6 @@
 # README #
 
-Project : LIBFT - C Standard Library (108/100)
+Project : LIBFT - C Standard Library (108/100)  
 Status  : Finished
 
 ### Use the library ###
