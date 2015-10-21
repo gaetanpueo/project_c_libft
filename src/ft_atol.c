@@ -17,6 +17,10 @@ long				ft_atol(const char *num)
 	long			value;
 	int				neg;
 
+	if (num == NULL)
+	{
+		return (0);
+	}
 	value = 0;
 	neg = 0;
 	if (ft_ishexa(num))
