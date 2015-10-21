@@ -21,6 +21,7 @@ SRCS	=	ft_abs.c \
 			ft_atol.c \
 			ft_bzero.c \
 			ft_count_digits.c \
+			ft_epur_str.c \
 			ft_hexval.c \
 			ft_isalnum.c \
 			ft_isalpha.c \
@@ -52,6 +53,7 @@ SRCS	=	ft_abs.c \
 			ft_memdel_2d.c \
 			ft_memmove.c \
 			ft_memset.c \
+			ft_nospace_strlen.c \
 			ft_putchar.c \
 			ft_putchar_fd.c \
 			ft_putdouble.c \
@@ -79,6 +81,7 @@ SRCS	=	ft_abs.c \
 			ft_strjoin.c \
 			ft_strlcat.c \
 			ft_strlen.c \
+			ft_strlower.c \
 			ft_strmap.c \
 			ft_strmapi.c \
 			ft_strncat.c \

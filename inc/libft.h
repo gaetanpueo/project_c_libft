@@ -26,6 +26,8 @@
 **   <stdlib.h>                             for free(), malloc() and exit()
 **   <string.h>                             for NULL and size_t
 **   <sys/types.h> <sys/uio.h> <sys/stat.h> for read()
+**   <sys/wait.h> <sys/param.h> <signal.h>
+**      <dirent.h>                          for shell functions
 **   <fcntl.h>                              for open()
 **   <math.h>                               for all mathematic functions
 **   "colors.h"                             colors in hexa, about 156 colors
@@ -39,7 +41,11 @@
 # include <sys/types.h>
 # include <sys/uio.h>
 # include <sys/stat.h>
+# include <sys/wait.h>
+# include <sys/param.h>
 # include <fcntl.h>
+# include <signal.h>
+# include <dirent.h>
 # include <math.h>
 # include "colors.h"
 
@@ -190,10 +196,13 @@ char				*ft_strjoin			(char const *s1, char const *s2);
 char				*ft_strtrim			(char const *s);
 char				*ft_strrep			(char *str, char const *sub,
 											char const *rep, int recurs);
+char				*ft_strlower		(char *str);
+char				*ft_epur_str		(char *str);
 int					ft_strequ			(char const *s1, char const *s2);
 int					ft_strnequ			(char const *s1, char const *s2,
 											size_t n);
 int					ft_hexval			(char c);
+int					ft_nospace_strlen	(char *str);
 size_t				ft_count_digits		(int n);
 size_t				ft_strpos			(const char *s1, const char *s2);
 void				ft_strdel			(char **as);
