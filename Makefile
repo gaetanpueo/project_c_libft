@@ -20,6 +20,7 @@ SRCS	=	ft_abs.c \
 			ft_atoi.c \
 			ft_atol.c \
 			ft_bzero.c \
+			ft_count_char.c \
 			ft_count_digits.c \
 			ft_epur_str.c \
 			ft_hexval.c \
