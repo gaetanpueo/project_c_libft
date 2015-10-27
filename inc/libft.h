@@ -204,6 +204,7 @@ int					ft_strnequ			(char const *s1, char const *s2,
 int					ft_hexval			(char c);
 int					ft_nospace_strlen	(char *str);
 size_t				ft_count_digits		(int n);
+size_t				ft_count_char		(char *str, char token);
 size_t				ft_strpos			(const char *s1, const char *s2);
 void				ft_strdel			(char **as);
 void				ft_strclr			(char *s);
