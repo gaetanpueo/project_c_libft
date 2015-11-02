@@ -37,7 +37,7 @@ long				ft_atol(const char *num)
 		while (*num && ft_isdigit(*num))
 			value = value * 10 + *num++ - '0';
 	}
-	((neg) ? return (value) : return (-value));
+	return ((neg) ? (value * -1) : (value));
 }
 
 unsigned long		ft_atoul(const char *num)
