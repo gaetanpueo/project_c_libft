@@ -10,7 +10,10 @@
 #                                                                              #
 #******************************************************************************#
 
+DATE	=	`date +%Y-%m-%d`
+
 BDIR	=	bin/
+A_BDIR	=	a_bin/
 SDIR	=	src/
 ODIR	=	obj/
 HDIR	=	inc/
@@ -138,7 +141,7 @@ mkdir:
 $(NAME): mkdir scemsg $(OBJS)
 	@ar rc $(BDIR)$(NAME) $(OBJS)
 	@ranlib $(BDIR)$(NAME)
-	@cp $(BDIR)$(NAME) $(NAME)
+	@cp $(BDIR)$(NAME) $(A_BDIR)$(NAME).$(DATE)
 	@echo "\n\033[73G\033[37;1m[\033[34mDone !\033[37m]\033[0m"
 
 $(ODIR)%.o: $(SDIR)%.c
