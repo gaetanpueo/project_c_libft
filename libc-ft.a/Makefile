@@ -17,8 +17,9 @@ A_BDIR	=	a_bin/
 SDIR	=	src/
 ODIR	=	obj/
 HDIR	=	inc/
+LDIR	=	/usr/local/lib/
 
-NAME	=	libft.a
+NAME	=	libc-ft.a
 SRCS	=	ft_abs.c \
 			ft_atoi.c \
 			ft_atol.c \
@@ -117,7 +118,7 @@ all: scmsg $(NAME)
 	@echo "\n--------------------------------------------------------------------------------"
 
 scmsg:
-	@echo "--------------------------- Start compilation libft ----------------------------\n"
+	@echo "--------------------------- Start compilation libc-ft ----------------------------\n"
 
 scemsg:
 	@echo "\033[34;1m>> \033[0mCompilation files ..."
@@ -149,7 +150,7 @@ $(ODIR)%.o: $(SDIR)%.c
 	@echo "|\c)"
 
 cleanobj:
-	@echo "----------------------------- Deleting files libft -----------------------------\n"
+	@echo "---------------------------- Deleting files $(NAME) ----------------------------\n"
 	@echo "\033[34;1m>> \033[0mRemoving object files ...\033[73G\c"
 	@rm -f $(OBJS)
 	@echo "\033[37;1m[\033[34mDone !\033[37m]\033[0m"
@@ -171,4 +172,14 @@ fclean: cleanobj
 
 re: fclean all
 
-.PHONY: all clean fclean re
+alias:
+	@echo "----------------------------- Making alias $(NAME) -----------------------------\n"
+	@echo "\033[34;1m>> \033[0mCreating alias ...\033[73G\c"
+	@echo "alias gcc-lib='gcc \$1 $(LDIR)$(NAME)'" >> ~/.bashrc
+	@echo "\033[37;1m[\033[34mDone !\033[37m]\033[0m"
+	@echo "\033[34;1m>> \033[0mCopying : $(NAME) in $(LDIR) ...\033[73G"
+	sudo cp $(BDIR)$(NAME) $(LDIR)$(NAME)
+	@echo "\033[73G\033[37;1m[\033[34mDone !\033[37m]\033[0m"
+	@echo "\n--------------------------------------------------------------------------------"
+
+.PHONY: all clean fclean re alias
